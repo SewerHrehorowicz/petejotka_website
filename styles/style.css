@@ -6,7 +6,7 @@
 
 p {
   font-size: 1rem;
-  margin-bottom: 20px;
+  padding-bottom: 12px;
 }
 
 footer {
@@ -19,7 +19,7 @@ footer {
 
 /* Layout */
 body {
-  background-image: url('images/ptjk_background.jpg');
+  background-image: url('../images/ptjk_background.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -29,9 +29,6 @@ body {
   color: #fff;
   background: radial-gradient(circle at center top, rgba(66, 161, 208, 0.65) 0%, rgba(47, 110, 183, 0.95) 512px);
   box-shadow: 0 8px 128px rgba(18, 41, 54, 0.5);
-  width: 800px;
-  margin: 0 auto;
-  padding: 0 48px;
 
   font-family: "Noto Serif", serif;
   font-optical-sizing: auto;
@@ -56,19 +53,6 @@ body {
   color: #002233
 }
 
-@media (max-width: 768px) {
-  .page-container {
-    width: 90%;
-    padding: 0 24px;
-  }
-}
-
-@media (min-width: 1400px) {
-  .page-container {
-    width: 1024px;
-  }
-}
-
 #ptjk_logo {
   width: 320px;
   height: auto;
@@ -82,46 +66,29 @@ body {
   border-top: 4px solid rgba(255,255,255, 0.5);
   font-size: 24px;
   font-weight: 200;
-  padding: 32px 0;
-}
-
-section {
-  border-bottom: 2px solid rgba(255,255,255, 0.5);
-  padding: 32px 0;
+  padding: 24px 0;
 }
 
 h2 {
   font-size: 2rem;
   font-weight: 300;
-  margin-bottom: 24px;
+  padding-bottom: 24px;
 }
 
 h3 {
   font-size: 1.75rem;
   font-weight: 300;
-  margin-bottom: 16px;
-}
-
-.column > p {
-  margin-bottom: 12px;
+  padding-bottom: 16px;
 }
 
 .column > h2 {
   font-size: 1.5rem;
-  margin-bottom: 12px;
+  padding-bottom: 12px;
 }
 
 .column > h3 {
   font-size: 1.25rem;
-  margin-bottom: 8px;
-}
-
-.columns {
-  display: flex;
-  gap: 48px;
-}
-.column {
-  flex: 1;
+  padding-bottom: 8px;
 }
 
 .weird {
@@ -132,6 +99,37 @@ h3 {
 }
 
 /* UI Components  */
+button.call-to-action {
+  background-color: #00c07a;
+  border: 4px solid #01a167;
+  box-sizing: border-box;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.5s ease;
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  margin: 0 auto;
+  display: block;
+}
+
+button.call-to-action:hover {
+  background-color: #00d687;
+  border-color: #00b875;
+ box-shadow: 0 0 32px #00d68780;
+  transform: translateY(-2px);
+}
+
+button.call-to-action::after {
+  content: "»";
+  margin-left: 8px;
+}
+
 .section-image-small, .images-cycle {
   width: 100%;
   height: auto;

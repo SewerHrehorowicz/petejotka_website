@@ -1,17 +1,45 @@
 const letterDelay = 20;
 const revealDelay = 50;
 
-function typeText(element, text) {
-  let index = 0;
-  element.textContent = '';
-  
-  const interval = setInterval(() => {
-    element.textContent += text[index];
-    index++;
-    if (index >= text.length) {
-      clearInterval(interval);
-    }
-  }, letterDelay);
+function typeText(element, html) {
+  const parts = html.split(/<br\s*\/?>/i);
+  element.innerHTML = '';
+
+  let partIndex = 0;
+
+  function typePart() {
+    if (partIndex >= parts.length) return;
+
+    const text = parts[partIndex];
+    let charIndex = 0;
+
+    const span = document.createElement('span');
+    element.appendChild(span);
+
+    const interval = setInterval(() => {
+      span.textContent += text[charIndex] || '';
+      charIndex++;
+
+      if (charIndex >= text.length) {
+        clearInterval(interval);
+
+        partIndex++;
+
+        if (partIndex < parts.length) {
+          element.appendChild(document.createElement('br'));
+        }
+
+        setTimeout(typePart, revealDelay);
+      }
+    }, letterDelay);
+  }
+
+  typePart();
+}
+
+function countChars(html) {
+  // usuwa <br> i liczy tylko znaki
+  return html.replace(/<br\s*\/?>/gi, '').length;
 }
 
 function initRevealTexts() {
@@ -21,37 +49,38 @@ function initRevealTexts() {
     const textElement = button.nextElementSibling;
     if (!textElement) return;
 
-    const originalText = textElement.textContent;
-    const delay = textElement.textContent.length * letterDelay + revealDelay;
+    const originalHTML = textElement.innerHTML;
+    const charCount = countChars(originalHTML);
+    const delay = charCount * letterDelay + revealDelay;
+
     const nextButton = textElement.nextElementSibling;
     const hasNextButton = nextButton && nextButton.classList.contains('inline-button');
-    
+
     if (hasNextButton) {
       nextButton.style.display = 'none';
-      nextButton.classList.add('hidden');
     }
-    textElement.textContent = '';
-    
-    button.addEventListener('click', () => {
-      const width = button.offsetWidth;
-      const height = button.offsetHeight;
-      
+
+    textElement.style.display = 'none';
+    textElement.innerHTML = '';
+
+    const handler = () => {
+      textElement.style.display = 'inline-block';
       button.classList.add('hidden');
-      button.removeEventListener('click', arguments.callee);
-      button.style.marginRight = -width + 'px';
-      textElement.style.marginTop = -height + 'px';
-      typeText(textElement, originalText);
-      
+      button.style.display = 'none';
+
+      typeText(textElement, originalHTML);
+
       if (hasNextButton) {
         setTimeout(() => {
           nextButton.style.display = 'inline-block';
-          nextButton.classList.remove('hidden');
         }, delay);
       }
-    });
+
+      button.removeEventListener('click', handler);
+    };
+
+    button.addEventListener('click', handler);
   });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  initRevealTexts();
-});
+document.addEventListener('DOMContentLoaded', initRevealTexts);
