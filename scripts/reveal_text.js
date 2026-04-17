@@ -1,5 +1,5 @@
-const letterDelay = 20; // Delay in milliseconds between each letter
-const revealDelay = 50; // Delay before starting to reveal text
+const letterDelay = 20;
+const revealDelay = 50;
 
 function typeText(element, text) {
   let index = 0;
@@ -21,26 +21,30 @@ function initRevealTexts() {
     const textElement = button.nextElementSibling;
     if (!textElement) return;
 
+    const originalText = textElement.textContent;
     const delay = textElement.textContent.length * letterDelay + revealDelay;
     const nextButton = textElement.nextElementSibling;
-    if (nextButton && nextButton.classList.contains('inline-button')) {
+    const hasNextButton = nextButton && nextButton.classList.contains('inline-button');
+    
+    if (hasNextButton) {
       nextButton.style.display = 'none';
       nextButton.classList.add('hidden');
     }
-      
-    const originalText = textElement.textContent;
     textElement.textContent = '';
     
     button.addEventListener('click', () => {
-      typeText(textElement, originalText);
-      button.removeEventListener('click', arguments.callee);
       const width = button.offsetWidth;
-      button.style.marginRight = -width + 'px';
+      const height = button.offsetHeight;
       
       button.classList.add('hidden');
-      if (nextButton && nextButton.classList.contains('hidden')) {
+      button.removeEventListener('click', arguments.callee);
+      button.style.marginRight = -width + 'px';
+      textElement.style.marginTop = -height + 'px';
+      typeText(textElement, originalText);
+      
+      if (hasNextButton) {
         setTimeout(() => {
-          nextButton.style.display = 'inline-block'; // Show next button after text is revealed
+          nextButton.style.display = 'inline-block';
           nextButton.classList.remove('hidden');
         }, delay);
       }

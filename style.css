@@ -102,6 +102,10 @@ h3 {
   margin-bottom: 16px;
 }
 
+.column > p {
+  margin-bottom: 12px;
+}
+
 .column > h2 {
   font-size: 1.5rem;
   margin-bottom: 12px;
@@ -128,7 +132,7 @@ h3 {
 }
 
 /* UI Components  */
-.section-image-small {
+.section-image-small, .images-cycle {
   width: 100%;
   height: auto;
   aspect-ratio: 1 / 1;
@@ -136,6 +140,22 @@ h3 {
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.images-cycle {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.images-cycle > img {
+  position: absolute;
+  top: 0; left: 0;
+  display: none;
+}
+
+.images-cycle > img.active {
+  display: block;
 }
 
 .inline-button {
@@ -162,6 +182,7 @@ h3 {
 
 .inline-button.hidden {
   opacity: 0;
+  height: 0;
 }
 
 .social-links {
