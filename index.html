@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Petejotka - książka dla dzieci</title>
-  <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/typography.css">
+  <link rel="stylesheet" href="styles/ui-components.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap" rel="stylesheet">
   <script src="scripts/counter.js"></script>
   <script src="scripts/reveal_text.js"></script>
@@ -22,152 +22,93 @@
   <div class="page-container">
     <header>
       <img id="ptjk_logo" src="images/ptjk_logo.svg" alt="Logo" class="logo">
-      <p id="tagline">
-        A więc chesz wiedzieć, kto to jest <strong>Petejotka? </strong>
-        <a class="inline-button">Czy to imię?</a>
-        <span class="reveal-text">
-          To dziewczynka, i tak, to jej imię. Nie do końca zwczajna dziewczynka, ale też nie
-          tak bardzo różna od innych dziewczynek w jej wieku.
-          Mieszka w Dziwnym Domu na szczycie wysokiego klifu na Dziwnym Półwyspie i wraz ze swoją siostrą
-          - Paciają - przeżywa dziwne, dzikie i niesamowite przygody.
-        </span>
-        <a class="inline-button">Przygody? Kocham przygody!</a>
-        <span class="reveal-text">
-          Opowiedziała mi je, kiedy gościła w naszym domu.
-          A ja (och, nie tylko ja) słuchałem ich z zapartym tchem.
-          W końcu postanowiłem je spisać i wydać w formie książki.</span>
+      <div id="tagline">
+        <p>
+          Petejotka to nie do końca zwczajna dziewczynka, która mieszka w Dziwnym Domu na szczycie wysokiego klifu nad Filotetowym Morzem i wraz z siostrą - Paciają - przeżywa dziwne, dzikie i niesamowite przygody.
+        </p>
+        <a class="inline-button">Przygody?</a>
+        <p class="reveal-text">
+          Opowiedziała mi je, kiedy gościła w naszym domu. A ja (och, nie tylko ja) słuchałem ich z zapartym tchem. W końcu postanowiłem je spisać i wydać w formie książki.</p>
         <a class="inline-button">Ale... ona istnieje? Ta Petejotka?</a>
-        <span class="reveal-text">
-          Bo w pewnym sensie ona istnieje. Petejotka istnieje, nie książka - choć książka też przecież istnieje, i to w
-          sensie całkiem dosłownym.
-          A w jakim sensie istnieje Petejotka? Cóż... nie będę na razie zdradzał :).</span>
-      </p>
-      <a class="reveal-button" data-reveal-section="section1">Ale o co chodzi?</a>
+        <p class="reveal-text">
+          Bo w pewnym sensie ona istnieje. Petejotka istnieje, nie książka - choć książka też przecież istnieje, i to w sensie całkiem dosłownym. A w jakim sensie istnieje Petejotka? Cóż... nie będę na razie zdradzał :).</p>
+      </div>
     </header>
 
-    <section id="section1">
-      <div class="columns">
-        <div class="column">
-          <h2>To książka dla dzieci</h2>
-          <div class="images-cycle" data-interval="1600">
-            <img src="images/book_cover.jpg" alt="Petejotka book cover" class="section-image-small">
-            <img src="images/book_inner.jpg" alt="Petejotka book page 1" class="section-image-small">
-            <img src="images/book_back.jpg" alt="Petejotka book page 1" class="section-image-small">
-            <img src="images/book_manuscript.jpg" alt="Petejotka book page 1" class="section-image-small">
-          </div>
+    <section class="columns">
+      <div class="column">
+        <h2>To książka dla dzieci</h2>
+        <div class="images-cycle" data-interval="1600">
+          <img src="images/book_cover.jpg" alt="Petejotka book cover" class="section-image-small">
+          <img src="images/book_inner.jpg" alt="Petejotka book page 1" class="section-image-small">
+          <img src="images/book_back.jpg" alt="Petejotka book page 1" class="section-image-small">
+          <img src="images/book_manuscript.jpg" alt="Petejotka book page 1" class="section-image-small">
+        </div>
 
-          <p>
-            Dla dzieci (choć nie dla maluchów), dla dorosłych... czemu nie? Oni też lubią bajki :). A ta bajka zaś... cóż,
-            jest nieco inna. A dlaczego? Bo to historia, która ma swoją historię.
-          </p>
-          <a class="inline-button">Historia... ma historię?</a>
-          <p class="reveal-text">
-            To było tak: Hania rysowała komiksy - ale bez dymków. Prosiła mnie, bym te komiksy czytał...
-          </p>
-          <a class="inline-button">Bez dymków?</a>
-          <p class="reveal-text">
-            No właśnie. Ciężko czytać bez dymków, prawda? Próbowałem to wytłumaczyć, w końcu rozmowa zeszła na rysownie
-            komiksów, i poowiedziałem, że ja też, kiedyś, jako dziecko, rysowałem komiksy.
-          </p>
-          <a class="inline-button">Ale co ma komisk do książki?</a>
-          <p class="reveal-text">
-            Myślisz pewnie - co ma komiks do książki? Ano trochę ma. Bo książki też pisałem - jako dziecko. Całkiem
-            zawzięcie, choć żadnej nie skończyłem. Hania poprosiła mnie, żebym przeczytał.
-          </p>
-          <a class="inline-button">Znalazłeś je?</a>
-          <p class="reveal-text">
-            Znalazłem je, odkurzyłem i przeczytałem. I przypomniałem sobie. I spłynęło na mnie olśnienie, że ta
-            książeczka, pisana w zeszycie, przeze mnie, dziesięcioletniego, okazała się czymś trwalszym niż wiele innych
-            rzeczy, którym w
-            dorosłym życiu przypisywałem większą wagę.
-          </p>
-          <a class="inline-button">Ha!</a>
-          <p class="reveal-text">
-            Postanowiłem więc napisać Petejotkę - ale to w skrócie, bo skąd się wzięła Petejotka, to inna historia.
-          </p>
-          <a class="inline-button">Kolejna historia?</a>
-          <p class="reveal-text">
-            Ale... na razie nie będę jej opowiadał. To chyba byłoby już za dużo.
-          </p>
-        </div>
-        <div class="column">
-          <h2>A ten koleś to autor</h2>
-          <div class="images-cycle" data-interval="1000">
-            <img src="images/author_portrait.jpg" alt="Author portrait" class="section-image-small">
-            <img src="images/author_portrait_2.jpg" alt="Author at work" class="section-image-small">
-            <img src="images/author_portrait_3.jpg" alt="Author with children" class="section-image-small">
-            <img src="images/author_portrait_4.jpg" alt="Author with children" class="section-image-small">
-          </div>
-          Nazywam się Sewer Hrehorowicz i jestem autorem Petejotki, a prywatnie także tatą Hani i Mai,
-            i  to dla nich zacząłem pisać tę książeczkę.</p>
-          <a class="inline-button">Ale fajnie!</a>
-          <p class="reveal-text">
-            Och, bardzo im się podobała. Pomyślałem więc że, innym dzieciom także może się spodobać.
-          </p>
-          <a class="inline-button">A poza pisaniem?</a>
-          <p class="reveal-text">
-            Poza pisaniem (nie tylko książek i nie tylko dla dzieci) zajmuję się ilustracją, malarstwem,
-            grafiką (dziś rzadziej niż kiedyś) a także tworzeniem gier. Z tą branżą jestem zawodowo związany od
-            ponad dziesięciu lat (och, kto by te lata liczył).
-          </p>
-          <h3>Znajdź mnie w sieci</h3>
-          <div class="social-links">
-            <a href="https://www.facebook.com/profile.php?id=61571535940082" target="_blank"
-              class="link social-icon facebook">Facebook</a>
-            <a href="https://www.artstation.com/cvltstudio" target="_blank"
-              class="link social-icon artstation">Artstation</a>
-            <a href="https://www.youtube.com/@sewerhrehorowicz" target="_blank"
-              class="link social-icon youtube">YouTube</a>
-          </div>
-        </div>
+        <p>
+          Dla dzieci (choć nie dla maluchów), dla dorosłych... czemu nie? Oni też lubią bajki :). A ta bajka... cóż, jest nieco inna. A dlaczego? Bo to historia, która ma swoją historię.
+        </p>
+        <a class="inline-button">Historia... ma historię?</a>
+        <p class="reveal-text">
+          To było tak: Hania rysowała komiksy - ale bez dymków. Prosiła mnie, bym te komiksy czytał...
+        </p>
+        <a class="inline-button">Bez dymków?</a>
+        <p class="reveal-text">
+          No właśnie. Ciężko czytać bez dymków, prawda? Próbowałem to wytłumaczyć, w końcu rozmowa zeszła na rysownie
+          komiksów, i poowiedziałem, że ja też, kiedyś, jako dziecko, rysowałem komiksy.
+        </p>
+        <a class="inline-button">Ale co ma komisk do książki?</a>
+        <p class="reveal-text">
+          Myślisz pewnie - co ma komiks do książki? Ano trochę ma. Bo książki też pisałem - jako dziecko. Całkiem
+          zawzięcie, choć żadnej nie skończyłem. Hania poprosiła mnie, żebym przeczytał.
+        </p>
+        <a class="inline-button">Znalazłeś je?</a>
+        <p class="reveal-text">
+          Znalazłem je, odkurzyłem i przeczytałem. I przypomniałem sobie. I spłynęło na mnie olśnienie, że ta
+          książeczka, pisana w zeszycie, przeze mnie, dziesięcioletniego, okazała się czymś trwalszym niż wiele innych
+          rzeczy, którym w
+          dorosłym życiu przypisywałem większą wagę.
+        </p>
+        <a class="inline-button">Ha!</a>
+        <p class="reveal-text">
+          Postanowiłem więc napisać Petejotkę - ale to w skrócie, bo skąd się wzięła Petejotka, to inna historia.
+        </p>
+        <a class="inline-button">Kolejna historia?</a>
+        <p class="reveal-text">
+          Ale... na razie nie będę jej opowiadał. To chyba byłoby już za dużo.
+        </p>
       </div>
-      <a class="reveal-button" data-reveal-section="section2">To ona już jest, ta książka?</a>
-    </section>
+      <div class="column">
+        <h2>A ten koleś to autor</h2>
+        <div class="images-cycle" data-interval="1000">
+          <img src="images/author_portrait.jpg" alt="Author portrait" class="section-image-small">
+          <img src="images/author_portrait_2.jpg" alt="Author at work" class="section-image-small">
+          <img src="images/author_portrait_3.jpg" alt="Author with children" class="section-image-small">
+          <img src="images/author_portrait_4.jpg" alt="Author with children" class="section-image-small">
+        </div>
+        <div class="social-links">
+          <a href="https://www.facebook.com/profile.php?id=61571535940082" target="_blank" class="link social-icon facebook">Facebook</a>
+          <a href="https://www.artstation.com/cvltstudio" target="_blank" class="link social-icon artstation">Artstation</a>
+          <a href="https://www.youtube.com/@sewerhrehorowicz" target="_blank" class="link social-icon youtube">YouTube</a>
+        </div>
+        <p>Nazywam się Sewer Hrehorowicz i jestem autorem Petejotki, a prywatnie także tatą Hani i Mai,
+          i to dla nich zacząłem pisać tę książeczkę.</p>
+        <a class="inline-button">Ale fajnie!</a>
+        <p class="reveal-text">
+          Och, bardzo im się podobała. Pomyślałem więc że, innym dzieciom także może się spodobać.
+        </p>
+        <a class="inline-button">A poza pisaniem?</a>
+        <p class="reveal-text">
+          Poza pisaniem (nie tylko książek i nie tylko dla dzieci) zajmuję się ilustracją, malarstwem,
+          grafiką (dziś rzadziej niż kiedyś) a także tworzeniem gier. Z tą branżą jestem zawodowo związany od
+          ponad dziesięciu lat (och, kto by te lata liczył).
+        </p>
 
-    <section id="section2">
-      <div class="columns">
-        <div class="column wide">
-          <h2>Gdzie można książkę kupić</h2>
-          <a class="inline-button">Bo można kupić? Powiedz, że można.</a>
-          <p class="reveal-text">Bo można ją kupić - choć to nie jest książka z gatunku tych, co to sobie spokojnie leżą
-            na półce w księgarni. A ja tak już mam, że wszystko muszę sam, wię postanowiłem sam ją zaprojektować, złożyć
-            i
-            wydrukować. I zrobiłem to. I pięknie wyszło, ale... </p>
-          <a class="inline-button">Ale co?</a>
-          <p class="reveal-text">
-            Książki się skończyły, więc trzeba będzie zrobić dodruk. I ja chcę zrobić dodruk, ale to działa tak: żeby to
-            miało sens, musi tę książkę więcej osób kupić. Tak więc tutaj, przez tę stronę, zbieram zamówienia na
-            Petejotkę.
-          </p>
-          <a class="inline-button">I jak to działa?</a>
-          <p class="reveal-text">
-            Trzeba więć będzie poczekać na książkę - ale na dobre rzeczy warto czekać, nie sądzisz?
-          </p>
-          <a class="inline-button">A długo trzeba będzie czekać?</a>
-          <p class="reveal-text">
-            Na dole strony jest taki licznik, który odlicza czas do końca akcji. Kiedy dojdzie do zera, i kiedy
-            wystarczająca ilość osób zamówi książkę, to ja robię dodruk, a potem wysyłam książki do tych, którzy
-            zamówili.
-            I to tyle.
-          </p>
-          <a class="inline-button">Dlaczego nie pójdziesz do wydawnictwa?</a>
-          <p class="reveal-text">
-            Bo widzisz - napisanie, zaprojektowanie, złożenia takiej książki (do tego jeszcze okładka i ilustracje) to
-            naprawdę kupa roboty. I kiedy pomyślałem, że lwią część zysków miałbym oddać, to odezwał się we mnie
-            taki głosik, który powiedział: "nie". Wpierw cienki, nieśmiały, ale zaraz przerodził się w stanowczy głos.
-          </p>
-        </div>
-        <div class="column narrow">
-          <h2>O czym jest książka</h2>
-          <p>Może jesteś rodzicem, i zastanawiasz się: co, po co, dlaczego, czy warto, dzy dobre to, czy uczy, i temu
-            podobne.</p>
-        </div>
       </div>
-      <a class="reveal-button" data-reveal-section="fragment">A mogę przeczytać kawałek?</a>
     </section>
 
     <section id="fragment">
-      <h2>Fragment książki</h2>
+      <h2>Poczytaj mi kawałek</h2>
       <p>Wybuch dziwnego drzewa to pierwsze wydarzenie, o jakim opowiedziała nam Petejotka. Twierdziła, że od niego
         wszystko się zaczęło. Jak to było, pytacie?</p>
       <a class="inline-button">Wybuch... drzewa? Ale o co chodzi?</a>
@@ -247,6 +188,45 @@
       </p>
     </section>
 
+    <section class="columns">
+      <div class="column wide">
+        <h2>Gdzie można książkę kupić</h2>
+        <a class="inline-button">Bo można kupić? Powiedz, że można.</a>
+        <p class="reveal-text">Bo można ją kupić - choć to nie jest książka z gatunku tych, co to sobie spokojnie leżą
+          na półce w księgarni. A ja tak już mam, że wszystko muszę sam, wię postanowiłem sam ją zaprojektować, złożyć
+          i
+          wydrukować. I zrobiłem to. I pięknie wyszło, ale... </p>
+        <a class="inline-button">Ale co?</a>
+        <p class="reveal-text">
+          Książki się skończyły, więc trzeba będzie zrobić dodruk. I ja chcę zrobić dodruk, ale to działa tak: żeby to
+          miało sens, musi tę książkę więcej osób kupić. Tak więc tutaj, przez tę stronę, zbieram zamówienia na
+          Petejotkę.
+        </p>
+        <a class="inline-button">I jak to działa?</a>
+        <p class="reveal-text">
+          Trzeba więć będzie poczekać na książkę - ale na dobre rzeczy warto czekać, nie sądzisz?
+        </p>
+        <a class="inline-button">A długo trzeba będzie czekać?</a>
+        <p class="reveal-text">
+          Na dole strony jest taki licznik, który odlicza czas do końca akcji. Kiedy dojdzie do zera, i kiedy
+          wystarczająca ilość osób zamówi książkę, to ja robię dodruk, a potem wysyłam książki do tych, którzy
+          zamówili.
+          I to tyle.
+        </p>
+        <a class="inline-button">Dlaczego nie pójdziesz do wydawnictwa?</a>
+        <p class="reveal-text">
+          Bo widzisz - napisanie, zaprojektowanie, złożenia takiej książki (do tego jeszcze okładka i ilustracje) to
+          naprawdę kupa roboty. I kiedy pomyślałem, że lwią część zysków miałbym oddać, to odezwał się we mnie
+          taki głosik, który powiedział: "nie". Wpierw cienki, nieśmiały, ale zaraz przerodził się w stanowczy głos.
+        </p>
+      </div>
+      <div class="column narrow">
+        <h2>O czym jest książka</h2>
+        <p>Może jesteś rodzicem, i zastanawiasz się: co, po co, dlaczego, czy warto, dzy dobre to, czy uczy, i temu
+          podobne.</p>
+      </div>
+    </section>
+
     <section>
       <h2>Audiobook</h2>
       <p>Tak, nagrałem nawet audiobooka. W prawdziwym studio, i myślę, że fajnie to wyszło. Sprawdź, posłuchaj.
@@ -270,8 +250,6 @@
       <div class="orders">Książkę zamówiło <span class="orders-number">8</span> osób</div>
       <button class="call-to-action">Chcę zamówić Petejotkę!</button>
     </section>
-
-
 
     <footer>
       <p>&copy; 2026 Wszelkie prawa zastrzeżone i takie tam.</p>

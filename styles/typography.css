@@ -1,0 +1,99 @@
+p {
+  font-size: 1rem;
+  padding-bottom: 12px;
+}
+
+footer > p {
+  font-size: 0.9rem;
+}
+
+footer > p.small {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.8);
+}
+
+
+.page-container {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  line-height: 1.5;
+}
+
+.link {
+  color: #aaeeff;
+  text-decoration: none;
+  background-color: rgba(0, 153, 255, 0.25);
+  border-radius: 4px;
+  padding: 0 0.25em;
+  transition: 0.3s ease;
+}
+
+.link:hover {
+  background-color: #aaeeff;
+  color: #002233
+}
+
+#ptjk_logo {
+  width: 320px;
+  height: auto;
+  display: block;
+  margin: 0 auto 48px;
+  filter: drop-shadow(0 0 24px rgba(178, 224, 255, 0.5));
+}
+
+#tagline {
+  border-bottom: 4px solid rgba(255,255,255, 0.5);
+  border-top: 4px solid rgba(255,255,255, 0.5);
+  
+  padding: 24px 0;
+}
+
+#tagline > p, #tagline > a {
+  font-size: 24px;
+  font-weight: 200;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  padding-bottom: 12px;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 300;
+  padding-bottom: 16px;
+}
+
+.column > h2 {
+  font-size: 1.5rem;
+  padding-bottom: 12px;
+}
+
+.column > h3 {
+  font-size: 1.25rem;
+  padding-bottom: 8px;
+}
+
+.weird {
+  font-style: italic;
+  color: #ff6f61;
+  filter: blur(0.3px);
+  
+}
+
+
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+  
+  section h2 {
+    font-size: 1.5rem;
+  }
+}

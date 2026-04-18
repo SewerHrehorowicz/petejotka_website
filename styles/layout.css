@@ -1,4 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('../images/ptjk_background.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
 .page-container {
+  color: #fff;
+    background: radial-gradient(circle at center top, rgba(66, 161, 208, 0.65) 0%, rgba(47, 110, 183, 0.95) 512px);
+    box-shadow: 0 8px 128px rgba(18, 41, 54, 0.5);
   width: 800px;
   margin: 0 auto;
   padding: 0 48px;
