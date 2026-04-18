@@ -9,12 +9,13 @@ p {
   padding-bottom: 12px;
 }
 
-footer {
-  background-color: #f8f9fa;
-  padding: 30px 20px;
-  text-align: center;
-  color: #666;
-  border-top: 1px solid #ddd;
+footer > p {
+  font-size: 0.9rem;
+}
+
+footer > p.small {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.8);
 }
 
 /* Layout */
@@ -156,7 +157,8 @@ button.call-to-action::after {
   display: block;
 }
 
-.inline-button {
+
+.inline-button, .reveal-button {
   cursor: pointer;
   display: inline-block;
   background-color: rgba(255,255,255,0.8);
@@ -168,19 +170,29 @@ button.call-to-action::after {
   padding: 0 12px;
 }
 
-.inline-button:hover {
+.reveal-button {
+  display: block;
+  width: fit-content;
+  margin: 24px auto;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.inline-button:hover, .reveal-button:hover {
   background-color: rgba(255,255,255,1);
 }
 
-.inline-button::after {
+.inline-button::after, .reveal-button::after {
   color: #666;
   margin-left: 4px;
   content: "»";
 }
 
-.inline-button.hidden {
+.inline-button.hidden, .reveal-button.hidden {
   opacity: 0;
   height: 0;
+  margin: 0;
+  overflow: hidden;
 }
 
 .social-links {
@@ -272,8 +284,8 @@ button.call-to-action::after {
 }
 
 .video-link {
-  display: inline-block;
-  margin-top: 20px;
+  display: block;
+  margin: 24px  auto;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);

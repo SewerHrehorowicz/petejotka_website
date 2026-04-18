@@ -1,0 +1,44 @@
+#META
+title: Opowiadanie
+author: Jan Kowalski
+
+----
+Wybuch dziwnego drzewa to pierwsze wydarzenie, o jakim opowiedziała nam Petejotka. Twierdziła, że od niego wszystko się zaczęło. Jak to było, pytacie?
+
+>> Wybuch... drzewa? Ale o co chodzi? -> next
+
+----
+Pitotura przy pasku nosił pęk kluczy. Do swojej pracowni, w której warzył mikstury, ale nie tylko —  także do  drzwi, których nie wolno było otwierać. Dzieci —  jak to dzieci —  bardzo chciały się dostać do  pracowni taty. Właśnie dlatego, że nie było wolno. Skradały się nieraz za nim i z szeroko otwartymi z ciekawości oczami patrzyły, jak Pitotura wchodzi i wychodzi z pracowni, otwiera ją i zamyka. 
+
+>> Kto to ten Pitotura? -> #Pitotura
+>> Dlaczego nie było wolni? -> #Dlaczego
+>> Nie obchodzi mnie, dalej -> next
+
+----
+#Pitotura 
+Pitoruta to tata dziewczynek. 
+>> Dalej -> #Pracownia
+
+----
+#Dlaczego
+> set $niebezpieczne
+> set $other_flag
+
+Ano dlatego, że to nie było dla dzieci bezpieczne.
+
+>> Dalej -> #Pracownia
+
+----
+#Pracownia : O pracowni Pitotury
+> clear $some_flag
+
+No, pracownia była dziwna. Bardzo dziwna. Było tam mnóstwo rzeczy
+
+? $niebezpieczne >> O, ale ja znalazłem coś specjalnego -> #Special
+? not $niebezpieczne >> Nic tu takiego nie ma -> #Inny
+? any $flag, $flag2 >> Tu inna opcja -> next
+? all $niebezpieczne, $flag, $flag2 >> Tylko, jeśli wszystkie -> next
+>> Nie obchodzi mnie -> next
+
+----
+A przycisk Nie obchodzi mnie, dalej przeniesie nas właśnie tutaj

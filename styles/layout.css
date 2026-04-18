@@ -4,9 +4,25 @@
   padding: 0 48px;
 }
 
+footer {
+  text-align: center;
+  border-top: 4px solid rgba(255,255,255, 0.5);
+  padding: 32px 64px 0 64px;
+}
+
 section {
   border-bottom: 2px solid rgba(255,255,255, 0.5);
+  opacity: 1;
   padding: 24px 0;
+  transition: 0.5s ease;
+}
+
+section.hidden {
+  opacity: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 .columns {
